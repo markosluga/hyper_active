@@ -19,11 +19,13 @@
 2. Create (or enable) an Administrative user with password a password. If you want to enable the Administrator account in Windows 10 Home quickly run this:
 
 `net user administrator /active:yes`
+
 `net user administrator afairlysecurenewpassword`
 
 3. Enable the Windows Remote Management rules in the firewall - run the following PowerShell commands as administrator:
 
 `Enable-NetFirewallRule -DisplayName "Windows Remote Management - Compatibility Mode (HTTP-In)"`
+
 `Enable-NetFirewallRule -DisplayName "Windows Remote Management (HTTP-In)"`
 
 4. To enable remote manangment on the Hyper-V host(s) run the following Powershell commands as admin:
@@ -39,13 +41,19 @@
 2. Add the machines as trusted hosts - you can ad the hosts as a list like mompc,dadpc,etc. or just use * instead :D enable the remote management clint role and create a policy. 
 All of this can easily be done by just running the following PowerShell commands as administrator:
 
-`Set-Item WSMan:\localhost\Client\TrustedHosts -Value *
-Enable-WSManCredSSP -Role client -DelegateComputer *
-New-Item -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\" -Name 'CredentialsDelegation'
-New-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\CredentialsDelegation\" -Name 'AllowFreshCredentialsWhenNTLMOnly' -PropertyType DWord -Value "00000001"
-New-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\CredentialsDelegation\" -Name 'ConcatenateDefaults_AllowFreshNTLMOnly' -PropertyType DWord -Value "00000001"
-New-Item -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\CredentialsDelegation\" -Name 'AllowFreshCredentialsWhenNTLMOnly'
-New-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\CredentialsDelegation\AllowFreshCredentialsWhenNTLMOnly\" -Name '1' -Value "wsman/*"`
+`Set-Item WSMan:\localhost\Client\TrustedHosts -Value *`
+
+`Enable-WSManCredSSP -Role client -DelegateComputer *`
+
+`New-Item -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\" -Name 'CredentialsDelegation'`
+
+`New-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\CredentialsDelegation\" -Name 'AllowFreshCredentialsWhenNTLMOnly' -PropertyType DWord -Value "00000001"`
+
+`New-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\CredentialsDelegation\" -Name 'ConcatenateDefaults_AllowFreshNTLMOnly' -PropertyType DWord -Value "00000001"`
+
+`New-Item -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\CredentialsDelegation\" -Name 'AllowFreshCredentialsWhenNTLMOnly'`
+
+`New-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\CredentialsDelegation\AllowFreshCredentialsWhenNTLMOnly\" -Name '1' -Value "wsman/*"`
 
 Use Hyper-V manager to connect to teach host that you have configured with the local administrative user-pass from step 2. 
 
