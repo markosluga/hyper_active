@@ -24,7 +24,7 @@ Repeat for your Sister's, Dad's, Brother's, Wife's, Kids etc. computers. But rem
 
 ### The manamgennt host
 
-1. On the managment machine install (at least) Hyper-V manager.
+1. On the managment machine install [Hyper-V manager (hyper-v-manager.ps1)](https://github.com/markosluga/hyper_active/blob/main/hyper-v-manager.ps1) or go with the [full package with hyper-v.ps1](https://github.com/markosluga/hyper_active/blob/main/hyper-v.ps1) just like on the hosts.
 
 2. Add the machines as trusted hosts - you can ad the hosts as a list like mompc,dadpc,etc. or just use * instead :D enable the remote management clint role and create a policy. 
 * To go with the defaults using * just run [configure-manager.ps1](https://github.com/markosluga/hyper_active/blob/main/configure-manager.ps1)
