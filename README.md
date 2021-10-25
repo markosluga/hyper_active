@@ -1,4 +1,4 @@
-# Set up hyper-v on your home network and run VMs on yopur Mom's PC
+# Run Hyper-v on your home network and put VMs on your Mom's PC
 
 ## To make your Mom's Windows 10 machine a Hyper-V host you'll need to do the following:
 
