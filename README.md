@@ -4,6 +4,8 @@ Make your Mom's Windows 10 machine a Hyper-V host that will do the dirty work of
 
 Since you doin't have an Active Directory domain at home you can simply do the following:
 
+***Remember that all these scripts need to be ran as Administrator, so you'll need to ask your mom for her password***
+
 ### The hyper-V host
 
 1. Install the Windows Hyper-V components.
@@ -18,7 +20,7 @@ Since you doin't have an Active Directory domain at home you can simply do the f
 
 2. Create (or enable) an Administrative user with password a password. 
 
-* If you want to enable the Administrator account in Windows 10 Home quickly run [enable-admin.cmd](https://github.com/markosluga/hyper_active/blob/main/enable-admin.cmd).
+* If you want to enable the Administrator account in Windows 10 Home quickly run [enable-admin.cmd](https://github.com/markosluga/hyper_active/blob/main/enable-admin.cmd). This is especially usefull if you have a passwordless user that self-logs in because Grandpa keeps forgetting his password, becasue you can just use the Administrator user and the self-login will continue to work.
 
 3. Enable the Windows Remote Management rules in the firewall and enable remote management - run [enable-wrm.ps1](https://github.com/markosluga/hyper_active/blob/main/enable-wrm.ps1)
 
