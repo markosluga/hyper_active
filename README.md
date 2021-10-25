@@ -6,11 +6,11 @@
 
 1. Install the Windows Hyper-V components.
 
-* If this is a *Windows 10 Pro then run [hyper-v.ps1](https://github.com/markosluga/hyper_active/blob/main/hyper-v.ps1).
+* If this is a *Windows 10 Pro* then run [hyper-v.ps1](https://github.com/markosluga/hyper_active/blob/main/hyper-v.ps1).
 
 (Instructions on other ways to that can be found on [the Mincrosoft Docs](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v).)
 
-* If this is a *Windows 10 Home then run the [hv.bat](https://github.com/markosluga/hyper_active/blob/main/hv.bat) as administrator.
+* If this is a *Windows 10 Home* then run the [hv.bat](https://github.com/markosluga/hyper_active/blob/main/hv.bat) as administrator.
 
 **All credits for hv.bat go to [HankTerrebrood-5600](https://docs.microsoft.com/en-us/answers/questions/29175/installation-of-hyper-v-on-windows-10-home.html)**
 
