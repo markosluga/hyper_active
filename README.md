@@ -1,8 +1,10 @@
 # Run Hyper-v on your home network and put VMs on your Mom's PC
 
-## To make your Mom's Windows 10 machine a Hyper-V host you'll need to do the following:
+Make your Mom's Windows 10 machine a Hyper-V host that will do the dirty work of running your VMs without consuming your CPU and RAM. 
 
-### The hyper-V host:
+Since you doin't have an Active Directory domain at home you can simply do the following:
+
+### The hyper-V host
 
 1. Install the Windows Hyper-V components.
 
@@ -22,7 +24,7 @@
 
 Repeat for your Sister's, Dad's, Brother's, Wife's, Kids etc. computers. But remember to **keep it in the family**!
 
-### The manamgennt host
+### The manamgement host
 
 1. On the managment machine install [Hyper-V manager (hyper-v-manager.ps1)](https://github.com/markosluga/hyper_active/blob/main/hyper-v-manager.ps1) or go with the [full package with hyper-v.ps1](https://github.com/markosluga/hyper_active/blob/main/hyper-v.ps1) just like on the hosts.
 
