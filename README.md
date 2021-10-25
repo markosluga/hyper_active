@@ -2,7 +2,7 @@
 
 ## To make your Mom's Windows 10 machine a Hyper-V host you'll need to do the following:
 
-### The hyper-V hosts:
+### The hyper-V host:
 
 1. Install the Windows Hyper-V components.
 
